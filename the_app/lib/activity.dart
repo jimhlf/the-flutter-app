@@ -18,6 +18,7 @@ class _ActivityCardState extends State<ActivityCard> {
 
   @override
   void initState() {
+    super.initState();
     label = widget.label;
     description = widget.description;
     isDone = false;
@@ -30,9 +31,10 @@ class _ActivityCardState extends State<ActivityCard> {
   }
 
   Icon getStatus() {
-    if (isDone)
-      return Icon(Icons.check_box_outlined);
-    return Icon(Icons.check_box_outline_blank);
+    if (isDone) {
+      return const Icon(Icons.check_box_outlined);
+    }
+    return const Icon(Icons.check_box_outline_blank);
   }
 
   @override
@@ -41,13 +43,13 @@ class _ActivityCardState extends State<ActivityCard> {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Column (
         children: [
-          Text(label, style: TextStyle(fontSize: 50)),
+          Text(label, style: const TextStyle(fontSize: 50)),
           SizedBox(height: 10),
-          Text(description, style: TextStyle(fontSize: 30)),
+          Text(description, style: const TextStyle(fontSize: 30)),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Complete: ', style: TextStyle(fontSize: 25)),
+              const Text('Complete: ', style: TextStyle(fontSize: 25)),
               ElevatedButton(onPressed: checkActivity, child: getStatus())
             ],
           )
@@ -73,6 +75,7 @@ class _ActivityPageState extends State<ActivityPage> {
       body: ListView(
         children: const [
           ActivityCard(label: 'Activity 1', description: 'This is an activity'),
+          ActivityCard(label: 'Complete The App', description: 'Remember to submit the project'),
         ],
       )
     );
