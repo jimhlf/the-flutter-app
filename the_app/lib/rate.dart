@@ -28,8 +28,9 @@ class _RatePageState extends State<RatePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding (
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 300),
+    return SizedBox (
+      width: 500,
+      height: 300,
       child: Card (
         color: Colors.blueGrey,
         child: Column (
