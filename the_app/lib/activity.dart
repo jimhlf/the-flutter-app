@@ -40,11 +40,11 @@ class _ActivityCardState extends State<ActivityCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
       child: Column (
         children: [
-          Text(label, style: const TextStyle(fontSize: 50)),
-          SizedBox(height: 10),
+          Text(label, style: const TextStyle(fontSize: 35)),
+          const SizedBox(height: 10),
           Text(description, style: const TextStyle(fontSize: 30)),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +52,8 @@ class _ActivityCardState extends State<ActivityCard> {
               const Text('Complete: ', style: TextStyle(fontSize: 25)),
               ElevatedButton(onPressed: checkActivity, child: getStatus())
             ],
-          )
+          ),
+          const SizedBox(height: 30),
         ],
       )
     );

@@ -29,7 +29,8 @@ class _LoginPage extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("Welcome To The App", style: TextStyle(fontSize: 30), textAlign: TextAlign.center,),
+            const Text("Welcome To The App", style: TextStyle(fontSize: 50), textAlign: TextAlign.center,),
+            const SizedBox(height: 50),
             SizedBox(
               width: 250,
               child: TextField(
@@ -68,10 +69,6 @@ class _LoginPage extends State<LoginPage> {
                   print('Login not successful');
                   passwordController.clear();
                 });
-                /*Navigator.push(
-                    context, MaterialPageRoute(
-                    builder: (context) => const MainAppPage(title: 'Home Page')));
-                */
               },
               child: const Text('Login')
             ),
